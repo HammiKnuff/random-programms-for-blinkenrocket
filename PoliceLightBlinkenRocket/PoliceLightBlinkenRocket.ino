@@ -5,30 +5,15 @@
 
 
 void setup() {
-  #define delay1 100
-  #define delay2 1000
+  #define delay1 50
+  #define delay2 100
 
-/*you have to setup these pins below. Even when not in use.
-if removed then rows will be turned off.
-*/
-    pinMode(0, OUTPUT);
-    pinMode(1, OUTPUT);
-    pinMode(2, OUTPUT);
-    pinMode(3, OUTPUT);
-    pinMode(4, OUTPUT);
-    pinMode(5, OUTPUT);
-    pinMode(6, OUTPUT);
-    pinMode(7, OUTPUT);
-
-//Used Pins
-    pinMode(8, OUTPUT);
-    pinMode(9, OUTPUT);
-    pinMode(10, OUTPUT);
-    pinMode(11, OUTPUT);
-    pinMode(12, OUTPUT);
-    pinMode(13, OUTPUT);
-    pinMode(14, OUTPUT);
-    pinMode(15, OUTPUT);
+int inMin = 0; // init pin 0 
+int inMax = 15; // to pin 15
+for(int i=inMin; i<=inMax; i++)
+{
+  pinMode(i, OUTPUT); // as OUTPUT
+}
 }
 
 
@@ -39,7 +24,7 @@ void loop() {
   digitalWrite(13, HIGH);
   digitalWrite(12, HIGH);
     
-  delay(delay1);                      
+   delay(delay1);                      
       digitalWrite(15, LOW);
       digitalWrite(14, LOW);
       digitalWrite(13, LOW);
@@ -79,5 +64,6 @@ void loop() {
   digitalWrite(10, LOW);
   digitalWrite(9, LOW);
   digitalWrite(8, LOW);
+  
   delay(delay2);   
   }
